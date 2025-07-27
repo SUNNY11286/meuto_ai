@@ -29,3 +29,7 @@ src.utils.exceptions.DataLoadingError: Error in __getitem__: 'You have to pass d
   (encoder): Encoder(
     (encoder_blocks): ModuleList(
       (0): Sequen, kwargs={}, original_exception=OutOfMemoryError) (Context: function=train_epoch, args=(<src.training.trainer.AnomalyDetectionTrainer object at 0x000002378820EAF0>,), kwargs={}, original_exception=ModelError)
+2025-07-27 20:37:44 | ERROR    | src.training.trainer:train:414 | Training failed: Error in train_epoch: Error in forward: CUDA out of memory. Tried to allocate 512.00 MiB. GPU 0 has a total capacty of 4.00 GiB of which 0 bytes is free. Of the allocated memory 10.06 GiB is allocated by PyTorch, and 133.86 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF (Context: function=forward, args=(ConvolutionalAutoencoder(
+  (encoder): Encoder(
+    (encoder_blocks): ModuleList(
+      (0): Sequen, kwargs={}, original_exception=OutOfMemoryError) (Context: function=train_epoch, args=(<src.training.trainer.AnomalyDetectionTrainer object at 0x0000027BF075AB20>,), kwargs={}, original_exception=ModelError)

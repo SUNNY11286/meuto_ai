@@ -21,7 +21,7 @@ __pycache__/
 # visualizations/
 # dist/
 # build/
-*.egg-info/
+# -uncomment after this text: *.egg-info/
 
 # IDE and OS specific files
 .idea/
