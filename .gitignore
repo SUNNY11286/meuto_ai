@@ -14,14 +14,14 @@ __pycache__/
 *.pyd
 
 # Generated files and logs
-logs/
-runs/
-models/
-results/
-visualizations/
-dist/
-build/
-*.egg-info/
+# logs/
+# runs/
+# models/
+# results/
+# visualizations/
+# dist/
+# build/
+# *.egg-info/
 
 # IDE and OS specific files
 .idea/
