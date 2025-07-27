@@ -1,0 +1,30 @@
+# Datasets
+anomaly_detection_test_data/
+
+# Python virtual environment
+.env
+.venv
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Generated files and logs
+logs/
+runs/
+models/
+results/
+visualizations/
+dist/
+build/
+*.egg-info/
+
+# IDE and OS specific files
+.idea/
+.vscode/
+.DS_Store
+*.swp

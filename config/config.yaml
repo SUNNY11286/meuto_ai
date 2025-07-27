@@ -1,0 +1,56 @@
+# Anomaly Detection Configuration
+project:
+  name: "text_scratch_detection"
+  version: "1.0.0"
+  description: "Production-grade anomaly detection for scratches on text images"
+
+data:
+  dataset_path: "anomaly_detection_test_data"
+  good_folder: "good"
+  bad_folder: "bad"
+  masks_folder: "masks"
+  test_split: 0.1
+  val_split: 0.1
+  image_size: [256, 256]
+  batch_size: 32
+  num_workers: 4
+
+model:
+  architecture: "autoencoder"
+  encoder_channels: [3, 64, 128, 256, 512]
+  decoder_channels: [512, 256, 128, 64, 3]
+  latent_dim: 512
+  dropout: 0.1
+  batch_norm: true
+
+training:
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 1e-5
+  scheduler: "cosine"
+  early_stopping_patience: 15
+  save_best_only: true
+  gradient_clip: 1.0
+
+anomaly_detection:
+  threshold_percentile: 95
+  min_anomaly_area: 100
+  morphology_kernel_size: 5
+  gaussian_blur_sigma: 1.0
+  
+augmentation:
+  enabled: true
+  rotation_limit: 10
+  brightness_limit: 0.2
+  contrast_limit: 0.2
+  noise_limit: 0.1
+
+logging:
+  level: "INFO"
+  log_dir: "logs"
+  tensorboard_dir: "runs"
+
+paths:
+  models_dir: "models"
+  results_dir: "results"
+  visualizations_dir: "visualizations"
