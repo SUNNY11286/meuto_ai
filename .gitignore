@@ -21,7 +21,7 @@ __pycache__/
 # visualizations/
 # dist/
 # build/
-# *.egg-info/
+*.egg-info/
 
 # IDE and OS specific files
 .idea/
